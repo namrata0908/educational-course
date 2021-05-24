@@ -1,0 +1,13 @@
+{
+  "name": "bs_testing",
+  "version": "1.0.0",
+  "description": "HackersVilla",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
