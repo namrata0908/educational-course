@@ -1,9 +1,20 @@
 const express = require('express');
-const app = express();
 const port = 3010
+const mongoose = require('mongoose')
+const url = 'mongodb://localhost/studentData'
+
+const app = express();
+mongoose.connect(url, {useNewUrlParser:true})
+const con = mongoose.connection
 app.use(express.json());
 app.use(express.static('./'));
 
+const db_functions = require('./db_assets/db_register')
+app.use('/register',db_functions)
+
+con.on('open',() => {
+	console.log('connected...')
+})
 
 app.use(function(req,res,next)
 {
@@ -12,16 +23,18 @@ app.use(function(req,res,next)
 	next();
 })
 
+/*
 app.get('/hello',function(req,res){
 	res.json({A:1});
 	console.log('Working');
 })
 
+
 app.post('/register',(req,res)=>{
     const { fname, password, phone, email} = req.body
     console.log(req.body)
 })
-
+*/
 
 app.listen(port,() => {
 	console.log("app is running on Port " + port)	
