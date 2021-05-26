@@ -16,8 +16,12 @@ const studentSchema = new mongoose.Schema({
     email: {
         type: String,
         required: true
-    }   
-
+    },   
+    isMember:{
+        type: Boolean,
+        required: true,
+        default: false
+    }
 })
 
 module.exports = mongoose.model('student',studentSchema)

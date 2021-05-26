@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
 const student = require('./db_initialize')
-
+/*
 router.get('/', async(req,res) => {
     try{    console.log('Get Request')
             const students = await student.find()
@@ -10,14 +10,13 @@ router.get('/', async(req,res) => {
         res.send('Error' + err)
     }
 })
-
+*/
 router.post('/', async(req,res) => {
     const Student = new student({
         fname: req.body.fname,
         password: req.body.password,
         phone: req.body.phone,
         email: req.body.email
-
     })
 
     try{

@@ -14,7 +14,7 @@
 <body style="background: var(--bs-indigo);"><div class="container">
       <div class="forms-container">
         <div class="signin-signup">
-          <form action="#" class="sign-in-form">
+          <form id="loginData" action="" class="sign-in-form">
             <h2 style="color: #6f42c1;" class="title">Sign in</h2>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
@@ -22,10 +22,10 @@
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input name="lpass" type="password" placeholder="Password">
+              <input name="lpwd" type="password" placeholder="Password">
             </div>
               <div class="row">
-                  <input type="submit" value="Login" class="btn solid">
+                  <button onclick="lData()" type="button" class="btn solid">Login</button>
             <button style="width:auto; margin-left: 2vw;" class="btn solid" href="#">Back to Home</button>
               </div>
             
@@ -115,7 +115,7 @@
       </div>
     </div>
 
-    <script src="app.js"></script>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/app.js"></script>
     <script src="./registeration.js"></script>

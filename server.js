@@ -15,15 +15,18 @@ app.use(function(req,res,next)
 	next();
 })
 
-const db_functions = require('./db_assets/db_register')
-app.use('/register',db_functions)
+const db_register = require('./db_assets/db_register')
+app.use('/register',db_register)
+
+
+const db_login = require('./db_assets/db_login')
+app.use('/login',db_login)
 
 con
 .once('open',() => console.log("Connected..."))
 .on('error', error => {
 	console.log('Your Error',error);
 });
-
 
 
 /*
