@@ -20,11 +20,12 @@ router.post('/', async(req,res) => {
 
     })
 
-    try{console.log('post request')
+    try{
         const a1 =  await Student.save() 
+        console.log('post request')
         res.json(a1)
     }catch(err){
-        res.send('Error')
+        res.send('Error' + err)
     }
 })
 
