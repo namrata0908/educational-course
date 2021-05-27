@@ -45,11 +45,14 @@ async function lData(){
 
     res = await  res.json();
     console.log(res)
-    if(res.code==202){
+    if(res.code===202){
         confirm('You are Logged in')
     }
-    if(res.code==200){
+    if(res.code===200){
         confirm('Wrong Password or Email')
+    }
+    if(res.code===203){
+        confirm("User doesn't exits")
     }
 
 }
