@@ -23,5 +23,5 @@ const studentSchema = new mongoose.Schema({
         default: false
     }
 })
-
+studentSchema.set('timestamps', true);
 module.exports = mongoose.model('student',studentSchema)
