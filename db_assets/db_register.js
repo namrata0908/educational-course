@@ -1,4 +1,5 @@
 const express = require('express')
+const bcrypt = require('bcrypt');
 const router = express.Router()
 const student = require('./db_initialize')
 /*
@@ -12,9 +13,16 @@ router.get('/', async(req,res) => {
 })
 */
 router.post('/', async(req,res) => {
+    const password = req.body.password
+    const saltRounds = 12
+
+// Hash Password
+const hash = await bcrypt.hash(password, saltRounds);
+
+    console.log('I am here ' + hash)
     const Student = new student({
         fname: req.body.fname,
-        password: req.body.password,
+        password: hash,
         phone: req.body.phone,
         email: req.body.email
     })
@@ -27,6 +35,5 @@ router.post('/', async(req,res) => {
         res.send('Error' + err)
     }
 })
-
 
 module.exports = router

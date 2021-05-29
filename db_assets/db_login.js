@@ -1,4 +1,5 @@
 const express = require('express')
+const bcrypt = require('bcrypt')
 const router = express.Router()
 const student = require('./db_initialize')
 
@@ -8,8 +9,8 @@ router.post('/', async(req,res) => {
     try{    var a = await student.findOne({email:email})
         if(a !== null)   {
             student.findOne({email:email},function(err,student){
-        try{
-                if(password===student.password){
+        try{    const isValidPass = bcrypt.compareSync(password, student.password);
+                if(isValidPass){
                     res.json({code:202}) // Successfully logged in
                     console.log(student)
                 }
@@ -23,7 +24,7 @@ router.post('/', async(req,res) => {
     })
 }
     else{ 
-        res.json({code:203})
+        res.json({code:203})    // Email doesn't Exist
     }
 }
     catch(error){
