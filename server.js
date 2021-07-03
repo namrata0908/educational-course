@@ -1,5 +1,5 @@
 const express = require('express');
-const port = 3010
+const port = process.env.PORT || 3010
 const mongoose = require('mongoose')
 const url = "mongodb://localhost/studentData"
 
