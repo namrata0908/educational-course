@@ -147,3 +147,10 @@ input[type="text"], input[type="email"], input[type="tel"], textarea {
   box-sizing: border-box;
 }
 
+.modal-content {
+  width: 0%;
+  position: absolute;
+  top: 10%;
+  left: 20%;
+}
+

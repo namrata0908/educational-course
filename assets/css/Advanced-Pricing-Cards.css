@@ -176,3 +176,7 @@
   display: none;
 }
 
+.pulse {
+  animation: animate 10s linear infinite;
+}
+

@@ -4,10 +4,11 @@ footer {
   box-sizing: border-box;
   width: 100%;
   text-align: left;
-  font: bold 16px sans-serif;
+  /*font: bold 16px sans-serif;*/
   padding: 55px 50px;
   bottom: 0;
   color: #fff;
+  /*background: linear-gradient(to right, #be26ff, #3b5fff);*/
 }
 
 .footer-navigation h3 {
