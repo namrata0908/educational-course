@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
+
+.myzoom
+{
+    transition: transform .4s;
+}
+
+.myzoom:hover
+{
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
+}
+
+.carousel.carousel-fade .carousel-item 
+{
+    display: block;
+    opacity: 0;
+    transition: opacity ease-out .3s;
+}
+
+.carousel.carousel-fade .carousel-item.active 
+{
+    opacity: 1 !important;
+}
+
+.caption1
+{
+    top: 80px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.caption2
+{
+    bottom: 80px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.caption3
+{
+    bottom: 80px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.carousel-caption h3
+{
+    font-family: 'Zen Dots', cursive;
+    font-size: 65px;
+}
+
+.carousel-caption p
+{
+    font-size: 20px;
+    top: 2rem;
+}
+
+/*------------------------------------- CAPTION MEDIA QUERIES (Optimized for mobile devices) ----------------------------------------*/
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px)
+{
+    .caption1
+    {
+        top: 20px;
+        padding: 50px 0;
+    }
+
+    .caption2
+    {
+        bottom: 0px;
+        padding: 50px 0;
+    }
+
+    .caption3
+    {
+        bottom: 40px;
+        padding: 50px 0;
+    }
+
+    .carousel-caption h3
+    {
+        font-family: 'Zen Dots', cursive;
+        font-size: 30px;
+    }
+
+    .carousel-caption p
+    {
+        font-size: 10px;
+        top: 2rem;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px)
+{
+    .caption1
+    {
+        top: 30px;
+        padding: 50px 0;
+    }
+
+    .caption2
+    {
+        bottom: 0px;
+        padding: 50px 0;
+    }
+
+    .caption3
+    {
+        bottom: 0px;
+        padding: 50px 0;
+    }
+
+    .carousel-caption h3
+    {
+        font-family: 'Zen Dots', cursive;
+        font-size: 25px;
+    }
+
+    .carousel-caption p
+    {
+        font-size: 12px;
+        top: 1rem;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) 
+{
+    .caption1
+    {
+        top: 0px;
+        padding: 50px 0;
+    }
+
+    .caption2
+    {
+        bottom: 0px;
+        padding: 50px 0;
+    }
+
+    .caption3
+    {
+        bottom: 0px;
+        padding: 50px 0;
+    }
+
+    .carousel-caption h3
+    {
+        font-family: 'Zen Dots', cursive;
+        font-size: 30px;
+    }
+
+    .carousel-caption p
+    {
+        font-size: 13px;
+        top: 2rem;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) 
+{
+    .caption1
+    {
+        top: 0px;
+        padding: 50px 0;
+    }
+    
+    .caption2
+    {
+        bottom: 0px;
+        padding: 50px 0;
+    }
+    
+    .caption3
+    {
+        bottom: 0px;
+        padding: 50px 0;
+    }
+    
+    .carousel-caption h3
+    {
+        font-family: 'Zen Dots', cursive;
+        font-size: 40px;
+    }
+    
+    .carousel-caption p
+    {
+        font-size: 20px;
+        top: 2rem;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) 
+{
+    .caption1
+    {
+        top: 80px;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    
+    .caption2
+    {
+        bottom: 80px;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    
+    .caption3
+    {
+        bottom: 80px;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+    
+    .carousel-caption h3
+    {
+        font-family: 'Zen Dots', cursive;
+        font-size: 65px;
+    }
+    
+    .carousel-caption p
+    {
+        font-size: 20px;
+        top: 2rem;
+    }
+}
+
+/*----------------------------------------- CAROUSEL MEDIA QUERIES (Optimized for mobile devices) --------------------------------------------------*/
+
+@media (max-width: 600px) {
+    .carousel {
+      max-height: 500px;
+    }
+  
+    .mine {
+      object-fit: cover;
+      object-position: 27% 0;
+      height: 500px;
+    }
+  
+    .mine1 {
+        object-fit: cover;
+      object-position: 13% 0;
+      height: 500px;
+    }
+  
+    .mine2 {
+      object-fit: cover;
+      object-position: 70% 0;
+      height: 500px;
+    }
+  }
