@@ -235,25 +235,22 @@
 /*----------------------------------------- CAROUSEL MEDIA QUERIES (Optimized for mobile devices) --------------------------------------------------*/
 
 @media (max-width: 600px) {
-    .carousel {
-      max-height: 500px;
-    }
-  
+    
     .mine {
-      object-fit: cover;
-      object-position: 27% 0;
-      height: 500px;
+        object-fit: cover;
+        object-position: 27% 0;
+        height: 500px;
     }
   
     .mine1 {
         object-fit: cover;
-      object-position: 13% 0;
-      height: 500px;
+        object-position: 13% 0;
+        height: 500px;
     }
   
     .mine2 {
-      object-fit: cover;
-      object-position: 70% 0;
-      height: 500px;
+        object-fit: cover;
+        object-position: 70% 0;
+        height: 500px;
     }
   }
