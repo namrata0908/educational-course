@@ -8,6 +8,7 @@ mongoose.connect(url, {useNewUrlParser:true})
 const con = mongoose.connection
 app.use(express.json());
 app.use(express.static('./'));
+
 app.use(function(req,res,next)
 {
 	res.header("Access-control-Allow-Origin","*");
@@ -28,6 +29,9 @@ con
 	console.log('Your Error',error);
 });
 
+app.get("/about", (req,res) => {
+	res.send("Lode yaha about ayega bsdk!");
+});
 
 /*
 app.get('/hello',function(req,res){
@@ -43,5 +47,6 @@ app.post('/register',(req,res)=>{
 */
 
 app.listen(port,() => {
+
 	console.log("app is running on Port " + port)	
 })
