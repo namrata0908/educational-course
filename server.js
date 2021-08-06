@@ -1,7 +1,7 @@
 const express = require('express');
 const port = process.env.PORT || 5000
 const mongoose = require('mongoose')
-const url = "mongodb://165.22.216.207/studentData"
+const url = "mongodb://localhost/studentData"
 
 const app = express();
 mongoose.connect(url, {useNewUrlParser:true})
