@@ -8,7 +8,7 @@ async function postData() {
     };
     userDetails = JSON.stringify(client);
     
-    res=await fetch("https://165.22.216.207:5000/register",
+    res=await fetch("https://hackersvilla.xyz:5000/register",
                     {
                         method:'POST',  headers: {
                     'Accept': 'application/json',
@@ -38,7 +38,7 @@ async function lData(){
     
     loginDetails = JSON.stringify(client2);
 
-    res = await fetch("https://165.22.216.207:5000/login",
+    res = await fetch("https://hackersvilla.xyz:5000/login",
             {
             method:'POST',  headers: {
             'Accept': 'application/json',
