@@ -8,7 +8,7 @@ async function postData() {
     };
     userDetails = JSON.stringify(client);
     
-    res=await fetch("http://localhost:3010/register",
+    res=await fetch("http://localhost:5000/register",
                     {
                         method:'POST',  headers: {
                     'Accept': 'application/json',
@@ -38,7 +38,7 @@ async function lData(){
     
     loginDetails = JSON.stringify(client2);
 
-    res = await fetch("http://localhost:3010/login",
+    res = await fetch("http://localhost:5000/login",
             {
             method:'POST',  headers: {
             'Accept': 'application/json',
