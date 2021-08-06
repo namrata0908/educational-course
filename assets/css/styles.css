@@ -45,6 +45,12 @@
     padding-right: 100px;
 }
 
+.carousel-caption h1
+{
+    font-family: 'Zen Dots', cursive;
+    font-size: 65px;
+}
+
 .carousel-caption h3
 {
     font-family: 'Zen Dots', cursive;
@@ -86,6 +92,12 @@
         font-size: 30px;
     }
 
+    .carousel-caption h1
+    {
+        font-family: 'Zen Dots', cursive;
+        font-size: 30px;
+    }
+
     .carousel-caption p
     {
         font-size: 12px;
@@ -115,6 +127,12 @@
     }
 
     .carousel-caption h3
+    {
+        font-family: 'Zen Dots', cursive;
+        font-size: 25px;
+    }
+
+    .carousel-caption h1
     {
         font-family: 'Zen Dots', cursive;
         font-size: 25px;
@@ -154,6 +172,12 @@
         font-size: 30px;
     }
 
+    .carousel-caption h1
+    {
+        font-family: 'Zen Dots', cursive;
+        font-size: 30px;
+    }
+
     .carousel-caption p
     {
         font-size: 13px;
@@ -183,6 +207,12 @@
     }
     
     .carousel-caption h3
+    {
+        font-family: 'Zen Dots', cursive;
+        font-size: 40px;
+    }
+
+    .carousel-caption h1
     {
         font-family: 'Zen Dots', cursive;
         font-size: 40px;
@@ -220,6 +250,12 @@
     }
     
     .carousel-caption h3
+    {
+        font-family: 'Zen Dots', cursive;
+        font-size: 65px;
+    }
+
+    .carousel-caption h1
     {
         font-family: 'Zen Dots', cursive;
         font-size: 65px;
