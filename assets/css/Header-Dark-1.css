@@ -159,6 +159,9 @@
 
 
 @media (min-width: 992px) {
+  /* .header-dark .navbar.navbar .navbar-nav .nav-link.nav-3 {
+    display: none;
+  } */
   .header-dark .navbar.navbar .navbar-nav .nav-link.nav-4 {
     display: none;
   }
@@ -186,6 +189,9 @@
 }
 
 @media (min-width: 1250px) {
+  /* .header-dark .navbar.navbar .navbar-nav .nav-link.nav-3 {
+    display: block;
+  } */
   .header-dark .navbar.navbar .navbar-nav .nav-link.nav-4 {
     display: block;
   }
