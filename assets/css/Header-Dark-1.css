@@ -162,6 +162,9 @@
   /* .header-dark .navbar.navbar .navbar-nav .nav-link.nav-3 {
     display: none;
   } */
+  .header-dark .navbar.navbar .navbar-nav .nav-link.nav-1 {
+    display: none;
+  }
   .header-dark .navbar.navbar .navbar-nav .nav-link.nav-4 {
     display: none;
   }
@@ -169,16 +172,18 @@
     display: none;
   }
   .navbar-text {
-    width: 210px;
+    width: auto;
   }
   .action-button.nav-button {
-    width: 230px;
+    width: auto;
     
   }
 }
 
 @media (min-width: 1200px) {
-  
+  .header-dark .navbar.navbar .navbar-nav .nav-link.nav-1 {
+    display: block;
+  }
   .navbar-text {
     width: auto;
     margin-right: 0px;
@@ -192,17 +197,12 @@
   /* .header-dark .navbar.navbar .navbar-nav .nav-link.nav-3 {
     display: block;
   } */
-  .header-dark .navbar.navbar .navbar-nav .nav-link.nav-4 {
-    display: block;
-  }
-  .header-dark .navbar.navbar .navbar-nav .nav-link.nav-5 {
-    display: block;
-  }
+
   .navbar-text {
-    width: 210px;
+    width: auto;
   }
   .action-button.nav-button {
-    width: 230px;
+    width: auto;
   }
 }
 
@@ -221,5 +221,48 @@
   .action-button.nav-button {
     width: auto;  
   }
+}
+
+/*----------------------------------------- GSC Google Search Console --------------------------------------------------*/
+
+.gsc-input {
+  background-color: transparent!important;
+  color: #fff!important;
+  padding: 0px!important;
+}
+  
+.gsc-input-box {
+  background-color: transparent!important;
+  border-color: #fff!important;
+  padding: 0px!important;
+  border-radius: 20px!important;
+  margin-right: 20px!important;
+  color:#fff;
+}
+  
+.gsc-search-button-v2 {
+  transform: scale(1.5)!important;
+  padding: 0px!important;
+}    
+
+@media (min-width: 992px){
+  .gsearch {
+      height: 40px !important;
+  }
+
+  .gsc-control-cse.gsc-control-cse-en {
+      margin-top: -22px !important;
+      border: 0px;
+  }
+}
+
+@media (max-width: 992px){
+  .gsc-control-cse.gsc-control-cse-en {
+     margin-left: -18px;
+  }
+}
+
+* {
+  font-family: roboto;
 }
 
