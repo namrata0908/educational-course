@@ -89,7 +89,7 @@ app.get("/login",function (req,res) {
 
 app.get("/*",function (req,res) {
 	res
-		.status(200)
+		.status(404)
 		.sendFile(path.join(__dirname,"404.html"));
 });
 
