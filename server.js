@@ -7,6 +7,9 @@ const app = express();
 mongoose.connect(url, {useNewUrlParser:true})
 const con = mongoose.connection
 app.use(express.json());
+
+var path = require("path");
+
 app.use(express.static('./'));
 app.use(function(req,res,next)
 {
@@ -41,6 +44,54 @@ app.post('/register',(req,res)=>{
     console.log(req.body)
 })
 */
+
+app.get("/",function (req,res) {
+	res
+		.status(200)
+		.sendFile(path.join(__dirname,"index.html"));
+});
+
+app.get("/about",function (req,res) {
+	res
+		.status(200)
+		.sendFile(path.join(__dirname,"about_us.html"));
+});
+
+app.get("/course",function (req,res) {
+	res
+		.status(200)
+		.sendFile(path.join(__dirname,"course_tour.html"));
+});
+
+app.get("/contact",function (req,res) {
+	res
+		.status(200)
+		.sendFile(path.join(__dirname,"contact_us.html"));
+});
+
+app.get("/home",function (req,res) {
+	res
+		.status(200)
+		.sendFile(path.join(__dirname,"index.html"));
+});
+
+app.get("/register",function (req,res) {
+	res
+		.status(200)
+		.sendFile(path.join(__dirname,"signin.html"));
+});
+
+app.get("/login",function (req,res) {
+	res
+		.status(200)
+		.sendFile(path.join(__dirname,"signin.html"));
+});
+
+app.get("/*",function (req,res) {
+	res
+		.status(200)
+		.sendFile(path.join(__dirname,"404.html"));
+});
 
 app.listen(port,() => {
 	console.log("app is running on Port " + port)	
