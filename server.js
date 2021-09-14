@@ -87,9 +87,7 @@ app.get("/login",function (req,res) {
 		.sendFile(path.join(__dirname,"signin.html"));
 });
 
-app.get("/bootcamp",function(req,res) {
-	res.redirect('https://form.typeform.com/to/LUGW5Tqx');
-});
+
 
 app.get("/*",function (req,res) {
 	res
