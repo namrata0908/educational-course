@@ -88,7 +88,7 @@ app.get("/login",function (req,res) {
 });
 
 app.get("/bootcamp",function(req,res) {
-	res.redirect('https://form.typeform.com/to/LUGW5Tqx');
+	res.write('Hello Guys');
 });
 
 app.get("/*",function (req,res) {

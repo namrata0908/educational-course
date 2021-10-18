@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
-Sitemap: https://hackersvilla.xyz/sitemap.xml
+Sitemap: https://localhost:5000/sitemap.xml
 # Namaste World!
