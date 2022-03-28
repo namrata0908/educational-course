@@ -91,11 +91,24 @@ app.get("/bootcamp",function(req,res) {
 	res.write('Hello Guys');
 });
 
+app.get("/dashboard",function (req,res) {
+	res
+		.status(200)
+		.sendFile(path.join(__dirname,"dashboard.html"));
+});
+
+app.get("/profile",function (req,res) {
+	res
+		.status(200)
+		.sendFile(path.join(__dirname,"profile.html"));
+});
+
 app.get("/*",function (req,res) {
 	res
 		.status(404)
 		.sendFile(path.join(__dirname,"404.html"));
 });
+
 
 app.listen(port,() => {
 	console.log("app is running on Port " + port)	
