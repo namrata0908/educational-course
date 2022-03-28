@@ -4,7 +4,8 @@
   box-sizing: border-box;
 }
 
-body, input {
+body,
+input {
   font-family: "Poppins", sans-serif;
 }
 
@@ -80,7 +81,7 @@ form.sign-in-form {
 .input-field i {
   text-align: center;
   line-height: 55px;
-  color: #6f42c1;
+  color: #0066ff;
   transition: 0.5s;
   font-size: 1.1rem;
 }
@@ -126,13 +127,13 @@ form.sign-in-form {
 }
 
 .social-icon:hover {
-  color: #6f42c1;
-  border-color: #6f42c1;
+  color: #0066ff;
+  border-color: #0066ff;
 }
 
 .btn {
   width: 150px;
-  background-color: #6f42c1;
+  background-color: #0066ff;
   border: none;
   outline: none;
   height: 49px;
@@ -147,8 +148,8 @@ form.sign-in-form {
 
 .btn:hover {
   background-color: white;
-  color: #6f42c1;
-  border: 2px solid #6f42c1;
+  color: #0066ff;
+  border: 2px solid #0066ff;
 }
 
 .panels-container {
@@ -169,7 +170,7 @@ form.sign-in-form {
   top: -10%;
   right: 48%;
   transform: translateY(-50%);
-  background-image: linear-gradient(-45deg, #6f42c1 0%, #6f42ff 100%);
+  background-image: linear-gradient(-45deg, #0066ff 0%, #6f42ff 100%);
   transition: 1.8s ease-in-out;
   border-radius: 50%;
   z-index: 6;
@@ -227,7 +228,8 @@ form.sign-in-form {
   font-size: 0.8rem;
 }
 
-.right-panel .image, .right-panel .content {
+.right-panel .image,
+.right-panel .content {
   transform: translateX(800px);
 }
 
@@ -238,7 +240,8 @@ form.sign-in-form {
   right: 52%;
 }
 
-.container.sign-up-mode .left-panel .image, .container.sign-up-mode .left-panel .content {
+.container.sign-up-mode .left-panel .image,
+.container.sign-up-mode .left-panel .content {
   transform: translateX(-800px);
 }
 
@@ -256,7 +259,8 @@ form.sign-in-form {
   z-index: 1;
 }
 
-.container.sign-up-mode .right-panel .image, .container.sign-up-mode .right-panel .content {
+.container.sign-up-mode .right-panel .image,
+.container.sign-up-mode .right-panel .content {
   transform: translateX(0%);
 }
 
@@ -285,7 +289,8 @@ form.sign-in-form {
 }
 
 @media (max-width: 870px) {
-  .signin-signup, .container.sign-up-mode .signin-signup {
+  .signin-signup,
+  .container.sign-up-mode .signin-signup {
     left: 50%;
   }
 }
@@ -378,19 +383,22 @@ form.sign-in-form {
 }
 
 @media (max-width: 870px) {
-  .container.sign-up-mode .left-panel .image, .container.sign-up-mode .left-panel .content {
+  .container.sign-up-mode .left-panel .image,
+  .container.sign-up-mode .left-panel .content {
     transform: translateY(-300px);
   }
 }
 
 @media (max-width: 870px) {
-  .container.sign-up-mode .right-panel .image, .container.sign-up-mode .right-panel .content {
+  .container.sign-up-mode .right-panel .image,
+  .container.sign-up-mode .right-panel .content {
     transform: translateY(0px);
   }
 }
 
 @media (max-width: 870px) {
-  .right-panel .image, .right-panel .content {
+  .right-panel .image,
+  .right-panel .content {
     transform: translateY(300px);
   }
 }
@@ -439,4 +447,3 @@ form.sign-in-form {
     left: 50%;
   }
 }
-
