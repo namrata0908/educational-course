@@ -1,0 +1,13 @@
+/dashboard - [sessionDone,payment,completion]
+
+
+
+/profile - [fullname,email,phone]
+	/photo - photo from db blob? - change
+	/password = [current,new]
+	/feedback -> csv append
+	
+/logout
+
+
+each main endpoint 

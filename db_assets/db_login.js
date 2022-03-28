@@ -2,6 +2,8 @@ const express = require('express')
 const bcrypt = require('bcrypt')
 const router = express.Router()
 const student = require('./db_initialize')
+const jwt = require('jsonwebtoken');
+const secret = require('./config')
 
 router.post('/', async(req,res) => {
     console.log('Data is here')
@@ -11,7 +13,10 @@ router.post('/', async(req,res) => {
             student.findOne({email:email},function(err,student){
         try{    const isValidPass = bcrypt.compareSync(password, student.password);
                 if(isValidPass){
-                    res.json({code:202}) // Successfully logged in
+                    const token = jwt.sign({email, password},secret, { expiresIn: '24h' })  //creating token
+                    
+                    console.log(token)
+                    res.json({code:202, token : token}) // Successfully logged in
                     console.log(student)
                 }
                 else{

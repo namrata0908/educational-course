@@ -8,7 +8,7 @@ async function postData() {
     };
     userDetails = JSON.stringify(client);
     
-    res=await fetch("https://hackersvilla.xyz:5000/register",
+    res=await fetch("http://localhost:5000/register",
                     {
                         method:'POST',  headers: {
                     'Accept': 'application/json',
@@ -38,7 +38,7 @@ async function lData(){
     
     loginDetails = JSON.stringify(client2);
 
-    res = await fetch("https://hackersvilla.xyz:5000/login",
+    res = await fetch("http://localhost:5000/login",
             {
             method:'POST',  headers: {
             'Accept': 'application/json',
@@ -46,6 +46,7 @@ async function lData(){
             },body:loginDetails});
 
     res = await  res.json();
+    localStorage.setItem('login_session',res.token)
     console.log(res)
     if(res.code===202){
         confirm('You are Logged in')
