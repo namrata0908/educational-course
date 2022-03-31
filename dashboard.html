@@ -117,8 +117,12 @@
                                 <div class="card-body">
                                     <div class="row align-items-center no-gutters">
                                         <div class="col me-2">
-                                            <div class="text-uppercase text-primary fw-bold text-xs mb-1"><span>SESSIONS DONE</span></div>
-                                            <div class="text-dark fw-bold h5 mb-0"><span>30</span></div>
+                                            <!-- <div class="text-uppercase text-primary fw-bold text-xs mb-1"><span>SESSIONS DONE</span></div>
+                                            <div class="text-dark fw-bold h5 mb-0"><span>30</span></div> -->
+                                            <div class="text-uppercase text-success fw-bold text-xs mb-1"><span>SESSIONS</span></div>
+                                            <div class="text-dark fw-bold h5 mb-0">
+                                                <img src onerror="showSessions()" id="sessions" />
+                                            </div>
                                         </div>
                                         <div class="col-auto"><i class="fas fa-calendar fa-2x text-gray-300"></i></div>
                                     </div>
@@ -148,8 +152,12 @@
                                             <div class="text-uppercase text-info fw-bold text-xs mb-1"><span>COMPLETION</span></div>
                                             <div class="row g-0 align-items-center">
                                                 <div class="col-auto">
-                                                    <div class="text-dark fw-bold h5 mb-0 me-3"><span>50%</span></div>
+                                                    <!-- <div class="text-dark fw-bold h5 mb-0 me-3"><span>50%</span></div> -->
+                                                    <div class="text-dark fw-bold h5 mb-0">
+                                                        <img src onerror="showCompletion()" id="completion" />
+                                                    </div>
                                                 </div>
+                                                
                                                 <div class="col">
                                                     <div class="progress progress-sm">
                                                         <div class="progress-bar bg-info" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: 50%;"><span class="visually-hidden">50%</span></div>
