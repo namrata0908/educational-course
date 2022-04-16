@@ -11,3 +11,9 @@
 
 
 each main endpoint 
+
+
+protected endpoint // jwt?
+backend dynamic data fetch
+
+//paymentgateway

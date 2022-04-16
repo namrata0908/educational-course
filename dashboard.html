@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src *; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'; img-src * data: 'unsafe-inline'; connect-src * 'unsafe-inline'; frame-src *;"> -->
+
     <title>Dashboard - Brand</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap_dashboard.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
@@ -14,7 +16,10 @@
     <link rel="stylesheet" href="assets/css/Toggle-Switch-1.css">
     <link rel="stylesheet" href="assets/css/Toggle-Switch.css">
 </head>
+<script type="text/javascript" id="www-widgetapi-script" src="https://s.ytimg.com/yts/jsbin/www-widgetapi-vflS50iB-/www-widgetapi.js" async=""></script>
+<script src="https://www.youtube.com/player_api"></script>
 <script src="./dashboardData.js"></script>
+<script src="./playedTime.js"></script>
 <body id="page-top">
     <div id="wrapper">
         <nav class="navbar navbar-dark align-items-start sidebar sidebar-dark accordion bg-gradient-primary p-0" style="background: #0066ff;">
@@ -187,13 +192,38 @@
                     <div class="row">
                         <div class="col-lg-7 col-xl-8">
                             <h1>My Courses</h1>
-                            <ul class="list-group">
+                            <!-- <ul class="list-group">
                                 <li class="list-group-item"><span>List Group Item 1</span></li>
                                 <li class="list-group-item"><span>List Group Item 2</span></li>
                                 <li class="list-group-item"><span>List Group Item 3</span></li>
-                            </ul>
+                            </ul> -->
+                            <div class="container">
+                                <div class="row">
+                                  <div class="col">
+                                      <span class="course-title">Java Tutorial</span>
+                                    <iframe id="player" width="800" height="400" src="https://www.youtube.com/embed/eIrMbAQSU34?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                  </div>
+                                  <!-- <div class="col">
+                                    <span class="course-title">Java Tutorial</span>
+                                    <iframe width="800" height="400" src="https://www.youtube.com/embed/eIrMbAQSU34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                  </div>
+                                  <div class="col">
+                                    <span class="course-title">Java Tutorial</span>
+                                    <iframe width="800" height="400" src="https://www.youtube.com/embed/eIrMbAQSU34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                  </div>
+                                  <div class="col">
+                                    <span class="course-title">Java Tutorial</span>
+                                    <iframe width="800" height="400" src="https://www.youtube.com/embed/eIrMbAQSU34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                  </div>
+                                  <div class="col">
+                                    <span class="course-title">Java Tutorial</span>
+                                    <iframe width="800" height="400" src="https://www.youtube.com/embed/eIrMbAQSU34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                  </div> -->
+                                </div>
+                                </div>
+                               
                         </div>
-                        <!-- <div class="col-lg-5 col-xl-4">
+                         <div class="col-lg-5 col-xl-4">
                             <div class="card shadow mb-4">
                                 <div class="card-header d-flex justify-content-between align-items-center">
                                     <h6 class="text-primary fw-bold m-0">Course Structure</h6>
@@ -209,7 +239,7 @@
                                     <div class="text-center small mt-4"><span class="me-2"><i class="fas fa-circle text-primary"></i>Hacking and Bounty</span><span class="me-2"><i class="fas fa-circle text-success"></i>&nbsp;Networking</span><span class="me-2"><i class="fas fa-circle text-info"></i>&nbsp;Linux-Unix</span></div>
                                 </div>
                             </div>
-                        </div> -->
+                        </div> 
                     </div>
                     <!-- <div class="row">
                         <div class="col">
