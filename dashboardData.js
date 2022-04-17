@@ -1,9 +1,19 @@
 function dashboardData(){
+    res=await fetch("http://localhost:5000/dashboardData",
+                    {
+                        method:'GET',  headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json' 
+                    }});
+    res=await res.json();
+    console.log(res)
     return ({"payment":6000,
     "sessionDone":5,
     "completion":60
     })
+
 }
+
 
 async function showPayment(){
 
