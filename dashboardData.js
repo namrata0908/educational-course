@@ -1,16 +1,18 @@
-function dashboardData(){
-    res=await fetch("http://localhost:5000/dashboardData",
+async function dashboardData(){
+    // console.log("dashboard is here")
+    client = {
+        token: localStorage.getItem('login_session')
+    };
+    userDetails = JSON.stringify(client);
+    res= await fetch("http://localhost:5000/dashboardData",
                     {
-                        method:'GET',  headers: {
+                        method:'POST',  headers: {
                     'Accept': 'application/json',
                     'Content-Type': 'application/json' 
-                    }});
-    res=await res.json();
-    console.log(res)
-    return ({"payment":6000,
-    "sessionDone":5,
-    "completion":60
-    })
+                    },body:userDetails});
+    res= await res.json();
+    // console.log(res)
+    return (res)
 
 }
 
@@ -18,18 +20,18 @@ function dashboardData(){
 async function showPayment(){
 
     const paymentDisplay = document.querySelector('#payment')
-        
-    paymentDisplay.outerHTML="<span>"+"Rs. "+dashboardData().payment+"</span>"
+    var payment = await dashboardData()
+    paymentDisplay.outerHTML="<span>"+"Rs. "+ payment.payment+"</span>"
 }
 async function showSessions(){
 
     const sessionsDisplay = document.querySelector('#sessions')
-        
-    sessionsDisplay.outerHTML="<span>"+dashboardData().sessionDone+"</span>"
+    var session = await dashboardData()
+    sessionsDisplay.outerHTML="<span>"+ session.sessionDone+"</span>"
 }
 async function showCompletion(){
 
     const completionDisplay = document.querySelector('#completion')
-        
-    completionDisplay.outerHTML="<span>"+dashboardData().completion +"%"+"</span>"
+    var completion = await dashboardData()
+    completionDisplay.outerHTML="<span>"+ completion.completion +"%"+"</span>"
 }

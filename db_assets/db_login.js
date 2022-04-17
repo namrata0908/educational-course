@@ -14,8 +14,7 @@ router.post('/', async(req,res) => {
         try{    const isValidPass = bcrypt.compareSync(password, student.password);
                 if(isValidPass){
                     const token = jwt.sign({email, password},secret, { expiresIn: '24h' })  //creating token
-                    
-                    console.log(token)
+
                     res.json({code:202, token : token}) // Successfully logged in
                     console.log(student)
                 }
