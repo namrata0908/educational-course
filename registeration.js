@@ -1,7 +1,8 @@
 async function postData() {
 
     client = {
-        fname:formData.fname.value,
+        firstname:formData.fname.value,
+        lastname:formData.lname.value,
         password:formData.pwd.value,
         phone:formData.phone.value,
         email:formData.email.value

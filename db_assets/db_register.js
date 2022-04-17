@@ -21,7 +21,8 @@ const hash = await bcrypt.hash(password, saltRounds);
 
     console.log('I am here ' + hash)
     const Student = new student({
-        fname: req.body.fname,
+        firstname: req.body.firstname,
+        lastname: req.body.lastname,
         password: hash,
         phone: req.body.phone,
         email: req.body.email

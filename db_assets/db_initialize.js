@@ -1,9 +1,13 @@
 const mongoose = require('mongoose')
 const studentSchema = new mongoose.Schema({
-    fname: {
+    firstname: {
           type: String,
         required: true
-    }, 
+    },
+    lastname: {
+        type: String,
+      required: true
+  }, 
     password:{
         type: String,
         required: true
@@ -16,10 +20,14 @@ const studentSchema = new mongoose.Schema({
         type: String,
         required: true
     },   
-    isMember:{
-        type: Boolean,
-        required: true,
-        default: false
+    payment:{
+        type: Number
+    },
+    sessionDone:{
+        type: Number
+    },
+    completion:{
+        type: Number
     }
 })
 studentSchema.set('timestamps', true);
