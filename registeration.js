@@ -50,13 +50,16 @@ async function lData(){
     localStorage.setItem('login_session',res.token)
     console.log(res)
     if(res.code===202){
-        confirm('You are Logged in')
+        window.location.href='/dashboard'
     }
     if(res.code===200){
-        confirm('Wrong Password or Email')
+        const signin = document.querySelector('#signin')
+        signin.outerHTML = "<span style="+"color:red"+">Wrong Password or Email</span>"
+        
     }
     if(res.code===203){
-        confirm("User doesn't exits")
+        const signin = document.querySelector('#signin')
+        signin.outerHTML = "<span style="+"color:red"+">User Doesn't Exist</span>"
     }
 
 }

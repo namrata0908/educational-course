@@ -35,3 +35,17 @@ async function showCompletion(){
     var completion = await dashboardData()
     completionDisplay.outerHTML="<span>"+ completion.completion +"%"+"</span>"
 }
+
+var deleteLink = document.querySelector('#logout');
+
+if(deleteLink){
+deleteLink.addEventListener('click', function(event) {
+    event.preventDefault();
+
+    var choice = confirm("Do you sure want to logout?");
+    if (choice) {
+        localStorage.removeItem('login_session')
+        document.location.href = '/'
+    }
+});
+}
