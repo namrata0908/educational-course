@@ -1,8 +1,14 @@
+if(localStorage.getItem('login_session') === null){
+    confirm('Login To Continue')
+    window.location.href = "/signin"
+}
+
 async function dashboardData(){
     // console.log("dashboard is here")
     client = {
         token: localStorage.getItem('login_session')
     };
+    if(client.token){
     userDetails = JSON.stringify(client);
     res= await fetch("http://localhost:5000/dashboardData",
                     {
@@ -13,7 +19,7 @@ async function dashboardData(){
     res= await res.json();
     // console.log(res)
     return (res)
-
+                }
 }
 
 
@@ -36,16 +42,22 @@ async function showCompletion(){
     completionDisplay.outerHTML="<span>"+ completion.completion +"%"+"</span>"
 }
 
-var deleteLink = document.querySelector('#logout');
 
-if(deleteLink){
-deleteLink.addEventListener('click', function(event) {
-    event.preventDefault();
 
-    var choice = confirm("Do you sure want to logout?");
-    if (choice) {
-        localStorage.removeItem('login_session')
-        document.location.href = '/'
-    }
-});
+
+async function logout(){
+    localStorage.removeItem('login_session')
+    window.location.href = "/"
+
+// if(deleteLink){
+// deleteLink.addEventListener('click', function(event) {
+//     event.preventDefault();
+
+//     var choice = confirm("Do you sure want to logout?");
+//     if (choice) {
+//         localStorage.removeItem('login_session')
+//         document.location.href = '/'
+//     }
+// });
+// }
 }

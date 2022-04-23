@@ -47,19 +47,18 @@ async function lData(){
             },body:loginDetails});
 
     res = await  res.json();
-    localStorage.setItem('login_session',res.token)
     console.log(res)
     if(res.code===202){
         window.location.href='/dashboard'
     }
     if(res.code===200){
         const signin = document.querySelector('#signin')
-        signin.outerHTML = "<span style="+"color:red"+">Wrong Password or Email</span>"
+        signin.outerHTML = "<span "+"style="+"color:red"+">Wrong Password or Email</span>"
         
     }
     if(res.code===203){
         const signin = document.querySelector('#signin')
-        signin.outerHTML = "<span style="+"color:red"+">User Doesn't Exist</span>"
+        signin.outerHTML = "<span "+"style="+"color:red"+">User Doesn't Exist</span>"
     }
 
 }

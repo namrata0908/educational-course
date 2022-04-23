@@ -2,6 +2,8 @@ const express = require('express');
 const port = process.env.PORT || 5000
 const mongoose = require('mongoose')
 const url = "mongodb://localhost/studentData"
+const auth = require("./middleware/auth");
+
 
 const app = express();
 mongoose.connect(url, {useNewUrlParser:true})
@@ -95,6 +97,7 @@ app.get("/bootcamp",function(req,res) {
 });
 
 app.get("/dashboard",function (req,res) {
+	
 	res
 		.status(200)
 		.sendFile(path.join(__dirname,"dashboard.html"));
