@@ -2,7 +2,6 @@ const express = require('express');
 const port = process.env.PORT || 5000
 const mongoose = require('mongoose')
 const url = "mongodb://localhost/studentData"
-const auth = require("./middleware/auth");
 
 
 const app = express();
