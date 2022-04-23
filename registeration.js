@@ -38,7 +38,7 @@ async function lData(){
     };
     
     loginDetails = JSON.stringify(client2);
-
+    
     res = await fetch("http://localhost:5000/login",
             {
             method:'POST',  headers: {
@@ -49,6 +49,7 @@ async function lData(){
     res = await  res.json();
     console.log(res)
     if(res.code===202){
+        localStorage.setItem('login_session',res.token)
         window.location.href='/dashboard'
     }
     if(res.code===200){

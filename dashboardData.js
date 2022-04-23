@@ -1,6 +1,10 @@
 if(localStorage.getItem('login_session') === null){
-    confirm('Login To Continue')
-    window.location.href = "/signin"
+    if(confirm('Login To Continue')){
+    window.location.href = "/login"
+    }
+    else{
+    window.location.href = "/404"
+    }
 }
 
 async function dashboardData(){
@@ -42,6 +46,12 @@ async function showCompletion(){
     completionDisplay.outerHTML="<span>"+ completion.completion +"%"+"</span>"
 }
 
+async function showName(){
+
+    const nameDisplay = document.querySelector('#name')
+    var name = await dashboardData()
+    nameDisplay.outerHTML="<span style=color:black>"+ name.firstname + " " + name.lastname +"</span>"
+}
 
 
 
