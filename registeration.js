@@ -54,12 +54,12 @@ async function lData(){
     }
     if(res.code===200){
         const signin = document.querySelector('#signin')
-        signin.outerHTML = `<span id="signin" "+"style="+"color:red"+">Wrong Password or Email</span>`
+        signin.outerHTML = `<span id="signin" style="color:red">Wrong Password or Email</span>`
         
     }
     if(res.code===203){
         const signin = document.querySelector('#signin')
-        signin.outerHTML = `<span id="signin" "+"style="+"color:red"+">User Doesn't Exist</span>`
+        signin.outerHTML = `<span id="signin" style="color:red">User Doesn't Exist</span>`
     }
 
 }

@@ -33,12 +33,7 @@ async function showPayment(){
     var payment = await dashboardData()
     paymentDisplay.outerHTML="<span>"+"Rs. "+ payment.payment+"</span>"
 }
-async function showSessions(){
 
-    const sessionsDisplay = document.querySelector('#sessions')
-    var session = await dashboardData()
-    sessionsDisplay.outerHTML="<span>"+ session.sessionDone+"</span>"
-}
 
 
 async function showName(){
@@ -66,5 +61,53 @@ async function logout(){
 // }
 }
 
+async function showVideo(){
+    var video = document.querySelector('#video')
+    client = {
+        token: localStorage.getItem('login_session')
+        };
+        userDetails = JSON.stringify(client);
+        res= await fetch("http://localhost:5000/dashboardData/session2",
+                        {
+                            method:'POST',  headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json' 
+                        },body:userDetails});
+        res= await res.json();
+        
+        
+        var payment = res.payment
+    if(payment > 2999){    
+    video.outerHTML=`<div class="container">
+                                <div class="row">
+                                  <div class="col">
+                                      <span class="course-title">Modern JavaScript Tutorial #1 - Intro & Setup</span>
+                                    <iframe id="player" width="800" height="400" src="https://www.youtube.com/embed/iWOYAxlnaww?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                  </div>
+                                  <div class="col">
+                                    <span class="course-title">Modern JavaScript Tutorial #2 - Syntax Basics & Types</span>
+                                  <iframe id="player2" width="800" height="400" src="https://www.youtube.com/embed/FhguwBJeqWs?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                                <div class="col">
+                                    <span class="course-title">Modern JavaScript Tutorial #3 - Control Flow</span>
+                                  <iframe id="player3" width="800" height="400" src="https://www.youtube.com/embed/JloLGV9DmtQ?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                                <div class="col">
+                                    <span class="course-title">Modern JavaScript Tutorial #4 - Functions</span>
+                                  <iframe id="player4" width="800" height="400" src="https://www.youtube.com/embed/xUI5Tsl2JpY?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                                <div class="col">
+                                    <span class="course-title">Modern JavaScript Tutorial #5 - Objects</span>
+                                  <iframe id="player5" width="800" height="400" src="https://www.youtube.com/embed/X0ipw1k7ygU?enablejsapi=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
 
+                                </div>
+                                </div>
+                               
+                        </div>`
+    }
+    else{
+        alert("Course Payment Not Completed!")
+    }
+}
 

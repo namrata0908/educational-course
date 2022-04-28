@@ -160,6 +160,27 @@ async function showCompletion(){
     completionDisplay.outerHTML="<span>"+ completion +"%"+"</span>"
 }
 
+async function showSessions(){
+
+    client = {
+        token: localStorage.getItem('login_session')
+        };
+        userDetails = JSON.stringify(client);
+        res= await fetch("http://localhost:5000/dashboardData/session2",
+                        {
+                            method:'POST',  headers: {
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json' 
+                        },body:userDetails});
+        res= await res.json();
+        
+
+    var session = res.sessionDone
+    const sessionsDisplay = document.querySelector('#sessions')
+    
+    sessionsDisplay.outerHTML="<span>"+ session+"</span>"
+}
+
 // async function showChart(){
 //     var chartDisplay = document.querySelector("#chart") 
 //     client = {

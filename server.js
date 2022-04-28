@@ -108,6 +108,12 @@ app.get("/profile",function (req,res) {
 		.sendFile(path.join(__dirname,"profile.html"));
 });
 
+app.get("/sessions",function (req,res) {
+	res
+		.status(200)
+		.sendFile(path.join(__dirname,"sessions.html"));
+});
+
 app.get("/*",function (req,res) {
 	res
 		.status(404)
