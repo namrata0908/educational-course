@@ -2,6 +2,21 @@ function profileData(){
     return ({"firstname":"Namrata",
     "lastname":"Sachin"
     })
+    // client = {
+    //     token: localStorage.getItem('login_session')
+    // };
+    // if(client.token){
+    // userDetails = JSON.stringify(client);
+    // res= await fetch("http://localhost:5000/dashboardData",
+    //                 {
+    //                     method:'POST',  headers: {
+    //                 'Accept': 'application/json',
+    //                 'Content-Type': 'application/json' 
+    //                 },body:userDetails});
+    // res= await res.json();
+    // console.log(res)
+    // return (res)
+    //             }
 }
 
 // async function showImage(){

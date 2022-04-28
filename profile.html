@@ -20,8 +20,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
     $(document).ready(function () {
-        const first = profileData().firstname.charAt(0)
-        const last = profileData().lastname.charAt(0)
+        var profiledata =  profileData()
+        const first = profiledata.firstname.charAt(0)
+        const last = profiledata.lastname.charAt(0)
         var initials = first+last
         // var profileImage = $('#profileImage').text(intials);
         document.getElementById('profileImage').innerText = initials

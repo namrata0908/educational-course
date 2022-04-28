@@ -39,8 +39,8 @@ router.post('/session', async(req,res) => {
     var email = decoded.email
     var res = await student.updateOne({email:email},{$set:{v1 : v1,v2 : v2,v3 : v3,v4 : v4,v5 : v5,sessionDone : sessionDone}})
     console.log(res)
-    if(!res)  return res.status(404).send('The student record not Updated')
-    res.status(200).send('Student Record Updated')
+    if(!res)  return res.send('The student record not Updated')
+    res.send('Student Record Updated')
 })
 
 router.post('/session2', async(req,res) => {

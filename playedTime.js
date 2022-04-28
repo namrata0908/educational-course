@@ -152,7 +152,7 @@ async function showCompletion(){
         res= await res.json();
         
         
-        var completion = res.completion
+        completion = res.completion
         
     
     
@@ -160,5 +160,26 @@ async function showCompletion(){
     completionDisplay.outerHTML="<span>"+ completion +"%"+"</span>"
 }
 
-
+// async function showChart(){
+//     var chartDisplay = document.querySelector("#chart") 
+//     client = {
+//         token: localStorage.getItem('login_session')
+//         };
+//         userDetails = JSON.stringify(client);
+//         res= await fetch("http://localhost:5000/dashboardData/session2",
+//                         {
+//                             method:'POST',  headers: {
+//                         'Accept': 'application/json',
+//                         'Content-Type': 'application/json' 
+//                         },body:userDetails});
+//         res= await res.json();
+        
+        
+//         completion = res.completion
+//     var uncomplete = (100-completion)
+//     chartDisplay.outerHTML = `<div class="card-body">
+//             <div class="chart-area"><canvas data-bss-chart="{&quot;type&quot;:&quot;doughnut&quot;,&quot;data&quot;:{&quot;labels&quot;:[&quot;Finished&quot;,&quot;Unfinished&quot;],&quot;datasets&quot;:[{&quot;label&quot;:&quot;&quot;,&quot;backgroundColor&quot;:[&quot;#4e73df&quot;,&quot;#FF0000&quot;],&quot;borderColor&quot;:[&quot;#ffffff&quot;,&quot;#ffffff&quot;,&quot;#ffffff&quot;],&quot;data&quot;:[&quot;`+uncomplete+`&quot;,&quot;` + completion + `&quot;]}]},&quot;options&quot;:{&quot;maintainAspectRatio&quot;:false,&quot;legend&quot;:{&quot;display&quot;:false},&quot;title&quot;:{}}}"></canvas></div>                               
+//         </div>`
+        
+// }
 
