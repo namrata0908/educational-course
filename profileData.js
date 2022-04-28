@@ -1,34 +1,33 @@
-function profileData(){
-    return ({"firstname":"Namrata",
-    "lastname":"Sachin"
-    })
-    // client = {
-    //     token: localStorage.getItem('login_session')
-    // };
-    // if(client.token){
-    // userDetails = JSON.stringify(client);
-    // res= await fetch("http://localhost:5000/dashboardData",
-    //                 {
-    //                     method:'POST',  headers: {
-    //                 'Accept': 'application/json',
-    //                 'Content-Type': 'application/json' 
-    //                 },body:userDetails});
-    // res= await res.json();
-    // console.log(res)
-    // return (res)
-    //             }
+async function postData() {
+
+    client = {
+        firstname:formData.fname.value,
+        lastname:formData.lname.value,
+        phone:formData.phone.value,
+        email:formData.email.value,
+        token: localStorage.getItem('login_session')
+    };
+    userDetails = JSON.stringify(client);
+    
+    res=await fetch("http://localhost:5000/setting",
+                    {
+                        method:'POST',  headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json' 
+                    },body:userDetails});
+    
+    res=await res.json();
+    if(res.code===200)
+    {   
+        alert("Profile Updated Successfully\n Login Again")
+        localStorage.removeItem('login_session')
+        window.location.href = "/register"
+    }
+    else{
+        alert("Access Denied\n Login Again")
+        localStorage.removeItem('login_session')
+        window.location.href = "/register"
+    }
+    
 }
 
-// async function showImage(){
-
-//     const completionDisplay = document.querySelector('#dp')
-//     const first = profileData().firstname.charAt(0)
-//     const last = profileData().lastname.charAt(0)
-//     completionDisplay.outerHTML = "<img id="+"profileImage"+"></img>"
-//     document.querySelector('#profileImage').innerText = first+last
-
-//     // completionDisplay.outerHTML="<span>"+dashboardData().completion +"%"+"</span>"
-// }
-
-
-/* <img class="rounded-circle mb-3 mt-4" src="assets/img/hv_new.png" width="160" height="160"></img> */

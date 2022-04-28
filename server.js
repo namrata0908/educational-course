@@ -26,6 +26,9 @@ app.use('/register',db_register)
 const db_login = require('./db_assets/db_login')
 app.use('/login',db_login)
 
+const db_setting = require('./db_assets/db_setting')
+app.use('/setting',db_setting)
+
 const db_dashboardData = require('./db_assets/db_dashboardData')
 app.use('/dashboardData',db_dashboardData)
 app.use('/dashboardData/*',db_dashboardData)
@@ -34,6 +37,7 @@ con
 .on('error', error => {
 	console.log('Your Error',error);
 });
+
 
 
 /*
