@@ -28,7 +28,7 @@ app.use('/login',db_login)
 
 const db_dashboardData = require('./db_assets/db_dashboardData')
 app.use('/dashboardData',db_dashboardData)
-
+app.use('/dashboardData/*',db_dashboardData)
 con
 .once('open',() => console.log("Connected..."))
 .on('error', error => {

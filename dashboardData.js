@@ -39,12 +39,7 @@ async function showSessions(){
     var session = await dashboardData()
     sessionsDisplay.outerHTML="<span>"+ session.sessionDone+"</span>"
 }
-async function showCompletion(){
 
-    const completionDisplay = document.querySelector('#completion')
-    var completion = await dashboardData()
-    completionDisplay.outerHTML="<span>"+ completion.completion +"%"+"</span>"
-}
 
 async function showName(){
 
@@ -52,7 +47,6 @@ async function showName(){
     var name = await dashboardData()
     nameDisplay.outerHTML="<span style=color:black>"+ name.firstname + " " + name.lastname +"</span>"
 }
-
 
 
 async function logout(){

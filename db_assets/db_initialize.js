@@ -28,7 +28,23 @@ const studentSchema = new mongoose.Schema({
     },
     completion:{
         type: Number
+    },
+    v1:{
+        type: Number
+    },
+    v2:{
+        type: Number
+    },
+    v3:{
+        type: Number
+    },
+    v4:{
+        type: Number
+    },
+    v5:{
+        type: Number
     }
+
 })
 studentSchema.set('timestamps', true);
 module.exports = mongoose.model('student',studentSchema)
