@@ -211,16 +211,19 @@
                                             <p class="text-primary m-0 fw-bold">Change Password</p>
                                         </div>
                                         <div class="card-body">
-                                            <form>
+                                            <form id="formData2" action="">
                                                 <div class="row">
                                                     <div class="col">
-                                                        <div class="mb-3"><label class="form-label" for="city"><strong>Old Password</strong></label><input class="form-control" type="password" id="city" name="oldpwd"></div>
+                                                        <div class="mb-3"><label class="form-label" for="city"><strong>Old Password</strong></label><input class="form-control" type="password"  name="pwd"></div>
                                                     </div>
                                                     <div class="col">
-                                                        <div class="mb-3"><label class="form-label" for="country"><strong>New Password</strong></label><input class="form-control" type="password" id="country"  name="newpwd"></div>
+                                                        <div class="mb-3"><label class="form-label" for="country"><strong>New Password</strong></label><input class="form-control" type="password"   name="newpwd"></div>
                                                     </div>
                                                 </div>
-                                                <div class="mb-3"><button class="btn btn-primary btn-sm" type="submit">Yes, change my password!</button></div>
+                                                <div class="mb-3">
+                                                    <!-- <button class="btn btn-primary btn-sm" type="submit">Yes, change my password!</button> -->
+                                                    <button class="btn btn-primary btn-sm" onclick="passData()" type="button">Change Password!</button>
+                                                </div>
                                             </form>
                                         </div>
                                     </div>
